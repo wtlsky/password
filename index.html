@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>不忘</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/spark-md5.js"></script>
+    <script src="./js/web.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-lg-4 col-lg-offset-4 col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-3">
+       <h2><label>不忘密码生成器</label></h2>
+        <input type="file" id="realFile">
+
+        <div class="input-group input-group">
+            <span class="input-group-addon"><strong>账号</strong></span><input class="form-control" type="text" id="uid">
+        </div>
+
+        <div class="input-group input-group">
+            <span class="input-group-addon"><strong>账号用途</strong></span><input class="form-control" type="text" id="use">
+            <span class="input-group-addon"><strong>密码长度</strong></span><input class="form-control" type="text" id="len"  value="18">
+        </div>
+
+        <div class="input-group input-group">
+            <span class="input-group-addon"><strong>种子文件</strong></span><input class="form-control" type="text" id="fileName">
+            <span class="input-group-btn"><button type="button" class="btn btn-danger" id="btn">选择文件</button></span>
+        </div>
+
+        <p><small>推荐使用您喜爱的照片、音乐等作为标识（请妥善保存标识文件,不要删除或修改文件）</small></p>
+        <div class="alert alert-success" id="result"></div>
+    </div>
+</div>
+</body>
+</html>
