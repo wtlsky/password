@@ -2,39 +2,64 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>不忘</title>
+    <title>Mnemosyne</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/jquery-2.1.4.min.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script src="./js/spark-md5.js"></script>
-    <script src="./js/web.js"></script>
 </head>
 <body>
 <div class="container-fluid">
     <div class="col-lg-4 col-lg-offset-4 col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-3">
-       <h2><label>不忘密码生成器</label></h2>
+        <h2>Mnemosyne</h2>
         <input type="file" id="realFile">
-
         <div class="input-group input-group">
-            <span class="input-group-addon"><strong>账号</strong></span><input class="form-control" type="text" id="uid">
+            <span class="input-group-addon"><label for="uid">用户账号</label></span>
+            <input class="form-control" type="text" id="uid" placeholder="Account">
         </div>
-
         <div class="input-group input-group">
-            <span class="input-group-addon"><strong>账号用途</strong></span><input class="form-control" type="text" id="use">
-            <span class="input-group-addon"><strong>密码长度</strong></span><input class="form-control" type="text" id="len"  value="18">
+            <span class="input-group-addon"><label for="use">账号用途</label></span>
+            <input class="form-control" type="text" id="use" placeholder="use">
         </div>
-
         <div class="input-group input-group">
-            <span class="input-group-addon"><strong>种子文件</strong></span><input class="form-control" type="text" id="fileName">
-            <span class="input-group-btn"><button type="button" class="btn btn-danger" id="btn">选择文件</button></span>
+            <span class="input-group-addon"><label for="len">密码长度</label></span>
+            <select class="form-control" id="len">
+                <option value="18">18</option>
+                <option value="17">17</option>
+                <option value="16">16</option>
+                <option value="15">15</option>
+                <option value="14">14</option>
+                <option value="13">13</option>
+                <option value="12">12</option>
+                <option value="11">11</option>
+                <option value="10">10</option>
+                <option value="9">09</option>
+                <option value="8">08</option>
+                <option value="7">07</option>
+                <option value="6">06</option>
+            </select>
         </div>
-
-        <p><small>推荐使用您喜爱的照片、音乐等作为标识（请妥善保存标识文件,不要删除或修改文件）</small></p>
-        <div class="alert alert-success" id="result"></div>
+        <div class="input-group input-group">
+            <span class="input-group-addon"><label for="realFile">钥匙文件</label></span>
+            <input class="form-control" type="text" id="fileName" placeholder="key file">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-danger" id="btn">选择文件</button>
+            </span>
+        </div>
+        <div class="" id="result"></div>
+    </div>
+    <div class="col-lg-4 col-lg-offset-4 col-md-5 col-md-offset-3 col-sm-6 col-sm-offset-3 icons">
+        <span><a href="./crx/Mnemosyne.crx"><img src="./images/chrome.png" alt="chrome浏览器" title="chrome浏览器" class="icon"></a></span>
+        <span><a href="./crx/Mnemosyne.crx"><img src="./images/opera.png" alt="opera浏览器" title="opera浏览器" class="icon"></a></span>
+        <span><a href="./crx/Mnemosyne.crx"><img src="./images/360safe.png" alt="360安全浏览器" title="360安全浏览器" class="icon"></a></span>
+        <span><a href="./crx/Mnemosyne.crx"><img src="./images/360jisu.png" alt="360极速浏览器" title="360极速浏览器" class="icon"></a></span>
+        <span><a href="./crx/Mnemosyne.crx"><img src="./images/sougou.png" alt="搜狗高速浏览器" title="搜狗高速浏览器" class="icon"></a></span>
+        <span><a href="./crx/Mnemosyne.crx"><img src="./images/uc.png" alt="UC浏览器" title="UC浏览器" class="icon"></a></span>
     </div>
 </div>
+<script src="./js/jquery-2.1.4.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/spark-md5.js"></script>
+<script src="./js/web.js"></script>
 </body>
 </html>
